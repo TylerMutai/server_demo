@@ -1,3 +1,4 @@
+/*
 package com.testing.demo.controllers;
 
 
@@ -51,4 +52,4 @@ public class CustomErrorController implements ErrorController {
         System.out.println("############################");
         return "/error";
     }
-}
+}*/

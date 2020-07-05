@@ -1,3 +1,4 @@
+/*
 package com.testing.demo.controllers;
 
 import org.springframework.http.HttpStatus;
@@ -45,9 +46,11 @@ public class ClientServerController {
         try {
             br = new BufferedReader(new FileReader(file));
         } catch (FileNotFoundException e) {
-          /*  jsonResponse.add("message", "No Clients to connect to are available. You can be one by" +
+          */
+/*  jsonResponse.add("message", "No Clients to connect to are available. You can be one by" +
                     " clicking on the be a server button");
-            return new ResponseEntity<>(jsonResponse.build().toString(), HttpStatus.NOT_FOUND);*/
+            return new ResponseEntity<>(jsonResponse.build().toString(), HttpStatus.NOT_FOUND);*//*
+
             return new ResponseEntity<>(Collections.singletonMap("response", new ArrayList<>()), HttpStatus.NOT_FOUND);
         }
         String st;
@@ -84,3 +87,4 @@ public class ClientServerController {
         return sb.toString();
     }
 }
+*/
