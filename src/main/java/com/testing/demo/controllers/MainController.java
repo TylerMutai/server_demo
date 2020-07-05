@@ -16,7 +16,7 @@ public class MainController extends TextWebSocketHandler {
     @Override
     public void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
         // Thread.sleep(3000); // simulated delay
-        /*if (sessions.size() > 1) {
+        if (sessions.size() > 1) {
             //The second client has connected. Send the respective IP addresses.
             WebSocketSession theOtherClient = null;
             for (WebSocketSession webSocketSession : sessions) {
@@ -36,7 +36,7 @@ public class MainController extends TextWebSocketHandler {
             session.sendMessage(msg);
         }
         //session.getRemoteAddress();
-        //session.sendMessage(msg);*/
+        //session.sendMessage(msg);
         session.sendMessage(new TextMessage(sessions.size() + ""));
     }
 
