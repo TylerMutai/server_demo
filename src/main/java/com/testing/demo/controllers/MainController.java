@@ -35,9 +35,9 @@ public class MainController extends TextWebSocketHandler {
             TextMessage msg = new TextMessage("IP: " + remoteIpOfOtherClient);
             session.sendMessage(msg);
         }
-        session.sendMessage(new TextMessage(sessions.size() + ""));
         //session.getRemoteAddress();
         //session.sendMessage(msg);*/
+        session.sendMessage(new TextMessage(sessions.size() + ""));
     }
 
     @Override
