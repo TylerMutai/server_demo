@@ -48,16 +48,13 @@ public class ClientServerController {
           /*  jsonResponse.add("message", "No Clients to connect to are available. You can be one by" +
                     " clicking on the be a server button");
             return new ResponseEntity<>(jsonResponse.build().toString(), HttpStatus.NOT_FOUND);*/
-            ArrayList<String> response = new ArrayList<>();
-            response.add("No Clients to connect to are available. You can be one by" +
-                    " clicking on the be a server button");
-            return new ResponseEntity<>(Collections.singletonMap("response", response), HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>(Collections.singletonMap("response", new ArrayList<>()), HttpStatus.NOT_FOUND);
         }
         String st;
         ArrayList<String> builder = new ArrayList<>();
         while ((st = br.readLine()) != null)
             builder.add(st);
-        return ResponseEntity.ok(Collections.singletonMap("servers", builder));
+        return ResponseEntity.ok(Collections.singletonMap("response", builder));
     }
 
     // function to generate a random string of length n
